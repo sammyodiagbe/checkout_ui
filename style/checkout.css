@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=DM+Sans&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+div.current_day_of_code {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 15px 20px;
+  background: #fff;
+  color: #222;
+  border-radius: 30px;
+}
+
+body {
+  font-size: 16px;
+  min-height: 100vh;
+  font-family: "DM Sans", sans-serif;
+}
+
+section {
+  display: block;
+  width: 100%;
+}
+
+button.open_modal {
+  padding: 20px 80px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: slateblue;
+  color: #fff;
+  font-weight: bold;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 8px;
+  -webkit-box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.3), -1px -1px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.3), -1px -1px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+button.close_modal {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  color: #fff;
+  background: red;
+  font-size: 30px;
+  font-weight: bold;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  cursor: pointer;
+}
+
+button.close_modal:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+div.checkout_ui {
+  padding: 5px;
+  width: 100%;
+  background: #342d5f;
+}
+
+div.checkout_ui div.modal_container {
+  background: #fdfdfd;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+div.checkout_ui div.modal_container div.section_left div.head {
+  padding-bottom: 15px;
+}
+
+div.checkout_ui div.modal_container div.section_left div.head div,
+div.checkout_ui div.modal_container div.section_left div.head h4 {
+  display: inline;
+}
+
+div.checkout_ui div.modal_container div.section_left div.head div {
+  margin-right: 15px;
+}
+
+div.checkout_ui div.modal_container div.section_left div.cart_content div.cart_content_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 0;
+  width: 100%;
+}
+
+div.checkout_ui div.modal_container div.section_left div.cart_content div.cart_content_bottom p {
+  font-size: 14px;
+}
+
+div.checkout_ui div.modal_container div.section_left div.cart_content div.cart_content_bottom select {
+  background: transparent;
+}
+
+div.checkout_ui div.modal_container div.section_left div.cart_items {
+  background: #fdfdfd;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+div.checkout_ui div.modal_container div.section_left div.cart_items div.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px 0;
+  padding: 16px 5px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+div.checkout_ui div.modal_container div.section_left div.cart_items div.item div.image_and_details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.checkout_ui div.modal_container div.section_left div.cart_items div.item div.image_and_details div.image_container {
+  margin-right: 5px;
+}
+
+div.checkout_ui div.modal_container div.section_left div.cart_items div.item div.image_and_details div.image_container img {
+  width: 50px;
+}
+
+div.checkout_ui div.modal_container div.section_left div.cart_items div.item div.image_and_details div.item_details p {
+  font-size: 14px;
+}
+
+div.checkout_ui div.modal_container div.section_left div.cart_items div.item div.quantity_container button.quantity_button {
+  background: transparent;
+  padding: 5px;
+  color: #444;
+  font-size: 12px;
+}
+
+div.checkout_ui div.modal_container div.section_left div.cart_items div.item div.quantity_container button.actual_quantity {
+  padding: 5px 8px;
+  height: 25px;
+  width: 25px;
+  background: transparent;
+  border: 1px solid lightgrey;
+  color: #444;
+  font-size: 12px;
+}
+
+div.checkout_ui div.modal_container div.section_left div.cart_items div.item button.trash {
+  color: #555;
+  background: transparent;
+}
+
+div.checkout_ui div.modal_container div.section_left div.cart_items div.item h5.price {
+  font-family: "Roboto", sans-serif;
+}
+
+div.checkout_ui div.modal_container div.section_right {
+  background: #565cba;
+  color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+div.checkout_ui div.modal_container div.section_right h3.title {
+  padding-bottom: 15px;
+}
+
+div.checkout_ui div.modal_container div.section_right div.form_container div.input_container label {
+  display: block;
+  padding: 8px 0;
+  font-size: 12px;
+}
+
+div.checkout_ui div.modal_container div.section_right div.form_container div.input_container input {
+  background: #6269ca;
+  color: #fff;
+  padding: 15px;
+  width: 100%;
+}
+
+div.checkout_ui div.modal_container div.section_right div.form_container div.input_container input::-webkit-input-placeholder {
+  color: #e1e1e1;
+}
+
+div.checkout_ui div.modal_container div.section_right div.form_container div.input_container input:-ms-input-placeholder {
+  color: #e1e1e1;
+}
+
+div.checkout_ui div.modal_container div.section_right div.form_container div.input_container input::-ms-input-placeholder {
+  color: #e1e1e1;
+}
+
+div.checkout_ui div.modal_container div.section_right div.form_container div.input_container input::placeholder {
+  color: #e1e1e1;
+}
+
+div.checkout_ui div.modal_container div.section_right div.form_container div.input_container.input_container_grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+}
+
+div.checkout_ui div.modal_container div.section_right div.form_container div.checkout_details {
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+div.checkout_ui div.modal_container div.section_right div.form_container div.checkout_details div.details {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.checkout_ui div.modal_container div.section_right div.form_container div.checkout_details div.details p {
+  font-size: 14px;
+}
+
+div.checkout_ui div.modal_container div.section_right div.form_container div.button_container {
+  padding-top: 10px;
+}
+
+div.checkout_ui div.modal_container div.section_right div.form_container div.button_container button {
+  color: #fff;
+  background: #df0082;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 18px;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: bolder;
+}
+
+div.checkout_ui div.modal_container div.section_right div.form_container div.button_container button span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.checkout_ui div.modal_container div.section_right div.form_container div.button_container button span.text {
+  margin-right: 10px;
+}
+
+div.checkout_ui div.modal_container div.section_right div.card_selection_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  padding: 15px 0;
+  grid-column-gap: 10px;
+}
+
+div.checkout_ui div.modal_container div.section_right div.card_selection_container div.selection {
+  position: relative;
+}
+
+div.checkout_ui div.modal_container div.section_right div.card_selection_container div.selection span.checkmark {
+  display: block;
+  position: absolute;
+  right: 10px;
+  font-size: 1.2em;
+  top: 0;
+  display: none;
+  z-index: 200;
+}
+
+div.checkout_ui div.modal_container div.section_right div.card_selection_container div.selection input[type="radio"] {
+  visibility: hidden;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+}
+
+div.checkout_ui div.modal_container div.section_right div.card_selection_container div.selection input[type="radio"]:checked + span.checkmark {
+  display: block;
+}
+
+div.checkout_ui div.modal_container div.section_right div.card_selection_container div.selection svg {
+  font-size: 12px;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 740px) {
+  div.checkout_ui {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  div.checkout_ui div.modal_container {
+    display: -ms-grid;
+    display: grid;
+    width: 800px;
+    -ms-grid-columns: 1fr 350px;
+        grid-template-columns: 1fr 350px;
+    grid-column-gap: 20px;
+    padding: 30px;
+  }
+}
+/*# sourceMappingURL=checkout.css.map */
